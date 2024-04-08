@@ -1,0 +1,12 @@
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    full_name = "April F. Montenegro"
+    address = "Brgy San Isidro Jaro"
+    return f"Full Name: {full_name}<br>Address: {address}"
+
+if __name__ == '__main__':
+    app.run(debug=True)
